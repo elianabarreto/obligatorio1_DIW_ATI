@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-principal: #3b183b;
+    --color-secundario: rgb(240, 88, 159);
+}
+
+header {
+    align-items: center;
+    background-color: var(--color-principal);
+    display: flex;
+    height: 75px;
+    justify-content: space-between;
+}
+
+/* LOGO */
+header img {
+    height: auto;
+    margin-left: 60px;
+    width: 28%;
+}
+
+/* ELEMENTOS DE NAVEGACIÓN */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 120px;
+}
+
+nav li {
+    font-weight: 500;
+    margin: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: all ease 0.5s;
+}
+
+/* SECCIÓN 1: PRESENTACIÓN DEL EVENTO */
+.seccion-presentacion {
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    word-spacing: 20px;
+    line-height: 100px;
+}
+
+h1 span {
+    color: var(--color-secundario);
+    font-size: 5rem;
+}
+
+/* SECCIÓN 2: DESCRIPCIÓN DEL EVENTO, FECHA Y DIRECCIÓN */
+#evento {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 90px 0;
+}
+
+#evento div {
+    margin-left: 70px;
+}
+
+#evento img, .descripcion-evento {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.titulos-secciones {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#evento h3 {
+    color:var(--color-principal);
+}
+
+.lugar-fecha {
+    display: flex;
+    list-style: none;
+    margin: 15px 0;
+}
+
+.lugar-fecha li {
+    margin-right: 35px;
+}
+
+/* SECCIÓN 3: SERVICIOS */
+#servicios {
+    background-color: var(--color-principal);
+    padding: 85px 150px;
+    color: white;
+}
+
+#servicios h3{
+    color: var(--color-secundario);
+    margin-left: 15px;
+}
+
+.descripcion-servicios {
+    width: 550px;
+    margin-left: 15px;
+}
+
+#servicios div {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+#servicios article {
+    background-color: white;
+    color: black;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.icono-servicios, .icono-redes {
+    color: var(--color-principal);
+    font-size: 45px;
+}
+
+#servicios article h4{
+    margin: 15px 0;
+    font-size: 20px;
+    color: var(--color-principal);
+}
+
+/* SECCIÓN 4: ARTISTAS*/
+
+#artistas {
+    padding: 65px 150px;
+    background-color: rgb(245, 240, 240);
+}
+
+#artistas h3 {
+    color: var(--color-principal);
+}
+
+#artistas div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    width: 700px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 10px;
+    border-collapse: collapse;
+    box-shadow: 0 1px 10px 1px;
+}
+
+th {
+    background-color: #ad7dad;
+    padding: 15px;
+    color: white;
+    text-align: left;
+    font-size: 20px;
+}
+
+.encabezado-tabla th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.encabezado-tabla th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+tr:nth-child(odd) {
+    background-color: #dbcfdb;
+}
+
+td {
+    padding: 10px;
+}
+
+.celda-imagen {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+table img {
+    width: 65px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* SECCIÓN 5: IMAGENES*/
+#imagenes {
+    background-color: rgb(245, 240, 240);
+}
+
+#imagenes div {
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3;
+    gap: 10px;
+    padding: 0 60px 70px 60px;
+}
+
+#imagenes article:first-child {
+    background-image: url(../img/1-marama.webp);
+    background-size: cover;
+    grid-row: span 2;
+    color: #e99a06;
+}
+
+#imagenes article:nth-child(2) {
+    background-image: url(../img/2-puente-atardecer2.jpg);
+    background-size: cover;
+    grid-column: span 2;
+    color: rgb(51, 247, 139);
+}
+
+#imagenes article:nth-child(3) {
+    background-image: url(../img/3-personas.webp);
+    background-size: cover;
+}
+
+#imagenes article:nth-child(4) {
+    background-image: url(../img/4-personas-cantando.jpg);
+    background-size: cover;
+    grid-row: span 2;
+    background-position: center;
+    color: var(--color-secundario);
+}
+
+#imagenes article:nth-child(5) {
+    background-image: url(../img/5-puente-atardecer.jpg);
+    background-size: cover;
+}
+
+#imagenes article:last-child {
+    background-image: url(../img/6-banda-escenario.webp);
+    background-size: cover;
+}
+
+.texto-img {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* SECCIÓN 6: TICKETS */
+
+#tickets {
+    background-color: var(--color-principal);
+    padding: 50px 0 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.contenedor-articles {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+#tickets h3 {
+    color: var(--color-secundario);
+}
+
+#tickets article {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: 30px;
+}
+
+#tickets .contenedor-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#tickets ul {
+    margin-left: 70px;
+}
+
+.btn-comprar, .btn-form {
+    border-radius: 5px;
+    background-color: var(--color-principal);
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    margin-top: 30px;
+}
+
+/* SECCIÓN 7: NOVEDADES */
+
+#novedades {
+    padding: 85px 150px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(231, 231, 231);
+}
+
+#novedades h3 {
+    color: var(--color-principal);
+}
+
+.descripcion-novedades {
+    margin-bottom: 20px;
+}
+
+.contenedor-form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.campo-texto, button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campo-texto {
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+}
+
+input, legend, label {
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+}
+
+fieldset input, label {
+    margin-right: 10px;
+}
+
+.contenedor-redes {
+    background-color: #dbcfdb;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: flex-end;
+    width: 400px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.logos-redes {
+    display: flex;
+}
+
+.logos-redes figure:nth-child(2){
+    margin: 0 20px;
+}
+
+.logos-redes figure {
+    border: 1px solid var(--color-principal);
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.icono-redes {
+    font-size: 35px;
+    margin: 6px;
+    transition: all ease 0.2s;
+}
+
+button {
+    transition: all ease 0.5s;
+}
+
+footer {
+    height: 60px;
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* PSEUDOSELECTORES */
+nav a:hover {
+    color: rgb(51, 247, 139);
+    border-bottom: 1px solid rgb(51, 247, 139);
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: var(--color-secundario);
+    cursor: pointer;
+}
+
+.icono-redes:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
